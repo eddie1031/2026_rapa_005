@@ -1,0 +1,28 @@
+package app;
+
+import java.util.List;
+
+public class KoreanCuisineAbility implements CuisineAbility {
+
+    private int exp = 0;
+
+    private void increaseExp() {
+        this.exp++;
+    }
+
+    @Override
+    public void apply(List<String> ingredient) {
+
+        this.increaseExp();
+
+        String usedIngredients = String.join(" ", ingredient);
+        System.out.println("%s를 끓여서 한국 음식을 요리했습니다.".formatted(usedIngredients));
+
+    }
+
+    @Override
+    public int getExp() {
+        return exp;
+    }
+
+}
