@@ -1,13 +1,21 @@
 package app;
 
+import repository.AbilityRepository;
+
 import java.util.List;
 
 public class KoreanCuisineAbility implements CuisineAbility {
 
-    private int exp = 0;
+    private final AbilityRepository repository;
+
+    public KoreanCuisineAbility(AbilityRepository repository) {
+        this.repository = repository;
+    }
 
     private void increaseExp() {
-        this.exp++;
+        String abilityName = this.getClass().getSimpleName();
+        int currentExp = repository.getCurrentExp(abilityName);
+        repository.applyExp(abilityName, ++currentExp);
     }
 
     @Override
@@ -22,7 +30,7 @@ public class KoreanCuisineAbility implements CuisineAbility {
 
     @Override
     public int getExp() {
-        return exp;
+        return repository.getCurrentExp(this.getClass().getSimpleName());
     }
 
 }
