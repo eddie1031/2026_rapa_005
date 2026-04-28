@@ -1,9 +1,11 @@
 package app;
 
+import org.springframework.stereotype.Component;
 import repository.AbilityRepository;
 
 import java.util.List;
 
+@Component
 public class KoreanCuisineAbility implements CuisineAbility {
 
     private final AbilityRepository repository;

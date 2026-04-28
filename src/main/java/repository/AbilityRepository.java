@@ -1,8 +1,11 @@
 package repository;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class AbilityRepository {
 
     private final Map<String, Integer> db = new HashMap<>();

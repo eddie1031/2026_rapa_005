@@ -1,12 +1,16 @@
 package app;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 
+@Component
 public class Chief {
 
     private CuisineAbility ability;
 
-    public Chief(CuisineAbility ability) {
+    public Chief(@Qualifier("koreanCuisineAbility") CuisineAbility ability) {
         this.ability = ability;
     }
 
