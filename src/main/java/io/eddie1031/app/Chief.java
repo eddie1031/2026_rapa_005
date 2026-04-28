@@ -1,4 +1,4 @@
-package app;
+package io.eddie1031.app;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;

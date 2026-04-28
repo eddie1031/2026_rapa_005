@@ -1,9 +1,8 @@
-package controller;
+package io.eddie1031.controller;
 
-import app.Chief;
+import io.eddie1031.app.Chief;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -30,6 +29,7 @@ public class FrontDesk {
             chief.cook(ingredients);
         }
 
+        // /WEB-INF/hall.html
         return "hall";
     }
 

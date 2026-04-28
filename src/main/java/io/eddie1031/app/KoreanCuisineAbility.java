@@ -1,7 +1,7 @@
-package app;
+package io.eddie1031.app;
 
 import org.springframework.stereotype.Component;
-import repository.AbilityRepository;
+import io.eddie1031.repository.AbilityRepository;
 
 import java.util.List;
 

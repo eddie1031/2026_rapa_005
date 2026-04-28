@@ -1,4 +1,4 @@
-package repository;
+package io.eddie1031.repository;
 
 import org.springframework.stereotype.Component;
 

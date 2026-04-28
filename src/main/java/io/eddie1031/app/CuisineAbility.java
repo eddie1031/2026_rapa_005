@@ -1,4 +1,4 @@
-package app;
+package io.eddie1031.app;
 
 import java.util.List;
 
