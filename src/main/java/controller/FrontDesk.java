@@ -16,5 +16,8 @@ public class FrontDesk {
         chief.cook(ingredients);
     }
 
+    public void checkExp() {
+        System.out.println("누적 경험치 : " + chief.checkExp());
+    }
 
 }

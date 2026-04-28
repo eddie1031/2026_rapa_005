@@ -1,6 +1,8 @@
 import app.Chief;
 import app.KoreanCuisineAbility;
 import config.GameConfiguration;
+import config.MonitorConfiguration;
+import controller.FrontDesk;
 
 import java.util.List;
 
@@ -12,15 +14,15 @@ public class CookingSimulatorApplication {
         List<String> ingredients = List.of("김치", "대파", "마늘", "고춧가루", "설탕");
 
         Chief chief1 = configuration.chief();
-        Chief chief2 = configuration.chief();
+        MonitorConfiguration monitorConfiguration = new MonitorConfiguration(chief1);
 
-        chief1.cook(ingredients);
-        chief2.cook(ingredients);
+        FrontDesk frontDesk = monitorConfiguration.frontDesk();
 
-        KoreanCuisineAbility koreanCuisineAbility = configuration.koreanCuisineAbility();
+        frontDesk.orderCuisine(ingredients);
+        frontDesk.orderCuisine(ingredients);
+        frontDesk.orderCuisine(ingredients);
 
-        System.out.println("koreanCuisineAbility.getExp() = " + koreanCuisineAbility.getExp());
-
+        frontDesk.checkExp();
 
     }
 
